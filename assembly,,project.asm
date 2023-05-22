@@ -1,5 +1,5 @@
  ; version 100
- .MODEL small
+.MODEL small
 .STACK 100h
 .DATA
 length dw 0
@@ -10,7 +10,7 @@ msg2 db 13,10,'please enter the char',13,10,'$'
 msg3 db 13,10,'the full square: ',13,10,'$'
 msg4 db 13,10,'the empty square: ',13,10,'$'
 msg5 db 13,10,'that was my projact hope you like it!,please hit any key to exit',13,10,'$'
-
+nextLine db 13,10,'$'
 .CODE 
 start:
     mov ax,@data
@@ -44,7 +44,7 @@ start:
     
     push [length]
     
-    mov crlf,0Dh
+    mov crlf,0Dh  ; write on clrf
     xor dx,dx
     mov dl,crlf
     push dx
@@ -157,20 +157,24 @@ DrawFirstLine:
     mov dx,[bp+8]
     mov [3],dx
     
-    lea dx,[crlf] ;main problem
+    lea dx,nextLine ;nextLine ;main problem
     mov ah,09h
     int 21h 
     
-    xor cx,cx
-    mov bx,[bp+6]
-    mov cx,bx
-    sub cx,02h
+    jmp DrawFirstLine
     
-    push [bp+8]   
-    push cx
-    push [bp+6]
-    push [bp+4]
-    call DrawMiddle
+   ; xor cx,cx
+   ; mov bx,[bp+6]
+   ; mov cx,bx
+   ; sub cx,02h
+    
+  ;  push [bp+8]   
+  ;  push cx
+   ; push [bp+6]
+  ;  push [bp+4]
+   ; call DrawMiddle  
+     
+endp SecondSquare
 ;---------------------------------------------
 proc DrawMiddle
     push bp

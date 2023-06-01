@@ -6,8 +6,11 @@ c. Draw a not fill Square.
 # פרטים על הפרוייקט ומהלך העבודה:
 שם הפרוייקט: SquareDrawer
 שם המתכנת: שי רינהרץ
+
 מורה: ברק צוברי המלך(בבקשה אפשר מאה?)
+
 כיתה: י'2
+
 בית הספר: ישיבת גבעת שמואל
 ![yba_gvsh_logo_sg_sofi-1-e1638872674233](https://github.com/baraksu/SquareDrawer/assets/131433824/cd878c8c-0c57-468f-bb54-82f0e40d1156)
 שנת הגשה: 2023

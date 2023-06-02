@@ -2,6 +2,17 @@
 .MODEL small
 .STACK 100h
 .DATA
+
+logo db 13,10,'   _____                            _____',13,10,                              
+db '  / ____|                          |  __ \ ',13,10,                            
+db ' | (___   __ _ _   _  __ _ _ __ ___| |  | |_ __ __ ___      _____ _ __ ',13,10,
+db '  \___ \ / _` | | | |/ _` | '__/ _ \ |  | | '__/ _` \ \ /\ / / _ \ __|',13,10,
+db '  ____) | (_| | |_| | (_| | | |  __/ |__| | | | (_| |\ V  V /  __/ |',13,10,   
+db ' |_____/ \__, |\__,_|\__,_|_|  \___|_____/|_|  \__,_| \_/\_/ \___|_|',13,10,   
+db '            | |                                                     ',13,10,                                                        
+db '            |_|                                                     ',13,10,'$'   
+
+
 length db 0 ;that would be the length of the lines and the rows in the square.
 char db 0 ;this is the char that the square would be made of.
 crlf db 13,10,'$';this is being used as an enter, evey time I need to get down with one line.
